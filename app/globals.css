@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary: 52 211 153;
+  --primary-light: 52 211 153;
+  --primary-dark: 52 211 153;
+  --background-light: 255 255 255;
+  --background-dark: 15 17 23;
 }
-
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -24,4 +26,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+@layer utilities {
+  .primary-green {
+    --tw-text-opacity: 1;
+    color: rgb(var(--primary-light) / var(--tw-text-opacity));
+  }
+
+  .bg-primary-green {
+    background-color: rgb(var(--primary-light) / .1);
+  }
 }
