@@ -63,7 +63,7 @@ const Landing: React.FC = () => {
       </div>
       <div className="pt-20 flex flex-row gap-1 goup">
         {buttons.map((button) => (
-          <CTAButton {...button}></CTAButton>
+          <CTAButton key={button.buttonText} {...button}></CTAButton>
         ))}
       </div>
     </div>
