@@ -150,8 +150,7 @@ export default function Home() {
               Subjects
             </h2>
             {subjects.map((subject) => (
-              <div>
-                {" "}
+              <div key={subject.title}>
                 <button
                   className={`py-3  px-4 text-sm ${
                     selectedContent.file == subject.file
@@ -168,7 +167,7 @@ export default function Home() {
               Roadmaps
             </h2>
             {roadmaps.map((subject) => (
-              <div>
+              <div key={subject.title}>
                 <button
                   className={`py-3  px-4 text-sm ${
                     selectedContent.file == subject.file
